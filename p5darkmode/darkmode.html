@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Dark Mode</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <link rel="stylesheet" href="darkmode.css">
+</head>
+<body>
+<!-- Dark Mode Switch -->
+<div class="theme-switch-wrapper">
+    <span id="toggle-icon">
+        <span class="toggle-text">Light Mode</span>
+        <i class="fas fa-sun"></i>
+    </span>
+    <label class="theme-switch">
+        <input type="checkbox">
+<!-- <span class="slider round"></span> -->
+<div class="slider round"></div>
+    </label>
+</div>
+    <!-- Navbar -->
+<nav id="nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#project">Projects</a>
+        <a href="#contact">Contact</a>
+</nav>
+
+
+    <!-- Home Section -->
+<section id="home">
+    <div class="title-group">
+        <h1>Custom title here</h1>
+        <h2 style="text-align: center;">Welcome to my website!</h2>
+    </div>
+</section>
+
+<section class="about">
+<h1>Undraw illustration</h1>
+<div class="about-container">
+    <div class="img-container">
+        <h2>Eating Together</h2>
+        <img src="undraw_eating_together_light.svg" alt="Proud Coder" id="image1">
+    </div>
+    <div class="img-container" id="image2">
+        <h2>Loving Burger</h2>
+        <img src="undraw_hamburger_light.svg" alt="">
+    </div>
+    <div class="img-container" id="image3">
+        <h2>Good mood</h2>
+        <img src="undraw_tasting_light.svg" alt="">
+    </div>
+</div>
+</section>
+
+<section class="project">
+    <h1>Buttons</h1>
+    <div class="buttons">
+       <button class="primary">Primary</button>
+       <buttons class="secondary">Secondary</buttons>
+       <buttons class="primary" disabled>Disabled</buttons>
+       <button class="outline">Outline</button>
+       <button class="secondary outline">Alt Outline</button>
+       <button class="outline" disabled>Disabled</button>
+    </div>
+
+    <div class="text-box" id="text-box">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere vero dolores eum minima exercitationem excepturi non rerum similique labore ex ut doloremque earum fugit recusandae libero, animi autem voluptatum molestias!</p>
+    </div>
+</section>
+
+<section class="contact">
+    <div class="socials-icon">
+    <i class="fab fa-github" style="color: #18191b;"></i>
+    <i class="fab fa-instagram" style="color: #f051c6;"></i>
+    <i class="fab fa-twitter" style="color: #4074ce;"></i>
+    <i class="fab fa-linkedin" style="color: #658fd7;"></i>
+    <i class="fab fa-youtube" style="color: #fc1d1d;"></i>
+    <i class="fab fa-discord" style="color: #a075f0;"></i> 
+<!-- fab means font awesome brands -->
+</div>
+</section>
+
+
+    <script src="darkmode.js"></script>
+</body>
+</html> 

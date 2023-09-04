@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Generator</title>
+    <link rel="stylesheet" href="quote.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body >
+    <div class="loader" id="loader"></div>
+
+    <!-- div.quote#quote   and .quote-text -->
+    <div class="quote-container" id="quote-container">
+
+        <!-- Quote -->
+        <div class="quote-text">
+            <i class="fas fa-quote-left"></i>
+            <span id="quote"></span>
+            <i class="fas fa-quote-right"></i>
+            <!-- we use span to take up the page other than the text itself -->
+
+        </div>
+
+        <!-- author -->
+        <div class="quote-author">
+            <span id="author"></span>
+        </div>
+
+        <!-- Buttons -->
+        <div class="button-container">
+            <button class="twitter-button" onclick="tweet()" id="twitter" title="Tweet this">
+                <i class="fab fa-twitter"></i>
+            </button>
+            <button id="new-quote" onclick="getQuote(api_url)">New Quote</button>
+        </div>
+    </div>
+    
+  
+
+    <script>
+        const quoteContainer = document.getElementById('quote-conatainer')
+        const quoteText = document.getElementById('quote')
+        const authorBtn = document.getElementById('author')
+        const twitterBtn = document.getElementById('twitter')
+        const newQuoteBtn = document.getElementById('new-quote')
+        const api_url = "https://api.quotable.io/random";
+        const loader = document.getElementById('loader')
+
+
+        
+        async function getQuote(url) {
+            loader.style.display='block';
+            const response = await fetch(url);
+            //this data will have all the information available in the above api
+            var data = await response.json();
+            // console.log(data);
+            quoteText.innerHTML = data.content;
+            authorBtn.innerHTML = data.author;
+            loader.style.display='none';
+        }
+        getQuote(api_url);
+
+
+        function tweet() {
+            window.open("https://twitter.com/intent/tweet?text=" + quoteText.innerHTML + "~  " + authorBtn.innerHTML, "Tweet Window", "width=600", "height=300")
+        }
+        
+    </script>
+
+
+
+
+</body>
+
+</html>

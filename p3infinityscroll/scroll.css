@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat&family=Patrick+Hand&family=Roboto+Condensed:ital@1&display=swap');
+
+html{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: 'Montserrat', sans-serif; 
+    background: whitesmoke;
+
+}
+
+h1{
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 40px;
+    letter-spacing: 5px;
+}
+
+.loader{
+    position: fixed;
+    top: 0;
+    bottom:0 ;
+    left: 0;
+    right: 0;
+    background-color: rgb(255, 255, 255, 0.8);
+    /* if we remove 0.8 then this color will apply to full background */
+}
+
+.loader img{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* accounting for the center of the image of page*/
+}
+.img-container{
+    margin: 10px 30%;
+
+}
+
+.img-container img{
+    width: 100%;
+    margin-top: 5px;
+
+}
+
+@media screen and (max-width:600px){
+    h1{
+        font-size: 20px;
+
+    }
+
+    .img-container{
+        margin: 10px;
+        
+    }
+    
+}
